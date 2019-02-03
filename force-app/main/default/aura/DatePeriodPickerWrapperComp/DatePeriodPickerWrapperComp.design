@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="startDate"  label="Start Date (output)"     description="Start date  for the selected period."/>
+    <design:attribute name="endDate"    label="End Date (output)"       description="End date for the selected period."/>
+</design:component>

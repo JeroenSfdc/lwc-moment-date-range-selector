@@ -1,0 +1,5 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global" description="ExtendedDatePickerWrapperComp">
+    <aura:attribute name="startDate" type="Date" access="public"/>
+    <aura:attribute name="endDate" type="Date" access="public"/>
+    <c:datePickerLwc/>
+</aura:component>

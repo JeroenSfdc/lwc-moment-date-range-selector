@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Period Picker" icon-name="standard:date_time">
+        <div class="slds-m-around_medium">
+
+            <lightning-layout horizontal-align="end" vertical-align="end">
+                <lightning-layout-item padding="around-small">
+                        <lightning-input type="date" name="startDate" label="Start" value={selectedStartDate}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                        <lightning-input type="date" name="endDate" label="End" value={selectedEndDate}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <div onkeyup={handleSearch}>
+                        <lightning-input
+                            type="search"
+                            label="Search your period"
+                            name="enter-search"
+                            placeholder="Search period...">
+                        </lightning-input>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+
+             <div style="height: 300px;">
+                    <lightning-datatable
+                        key-field="period"
+                        data={data}
+                        columns={columns}
+                        max-row-selection="1"
+                        onrowselection={handleSelect}>
+                    </lightning-datatable>
+            </div>    
+         </div>    
+    </lightning-card>
+</template>
